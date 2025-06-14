@@ -12,6 +12,23 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/1a5370af29.js" crossorigin="anonymous"></script>
 
+    <style>
+      /* Custom hover effects for mobile */
+      @media (hover: none) {
+          .mobile-hover:hover {
+              transform: none !important;
+          }
+          .card-hover:hover {
+              box-shadow: none !important;
+              transform: none !important;
+          }
+          .card-hover:active {
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+              transform: translateY(-2px) !important;
+          }
+      }
+  </style>
+
     <link rel="stylesheet" href="autohub.html">
     <title>AutoHub page2</title>
 </head>
@@ -305,5 +322,40 @@
 <li class="text-xs text-gray-300"><a href="">Privacy Policy / Contact Us</a></li>
 </ul>
 </footer>
+
+ <!-- Scripts -->
+ <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+ <script>
+     // Mobile menu toggle
+     document.getElementById('menu-toggle').addEventListener('click', function() {
+         const menu = document.getElementById('mobile-menu');
+         menu.classList.toggle('hidden');
+     });
+
+     // Initialize carousel
+     new Glide('.glide', {
+         type: 'carousel',
+         perView: 1,
+         autoplay: 3000,
+         hoverpause: true
+     }).mount();
+ </script>
+     <script>
+         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+             const menu = document.getElementById('mobile-menu');
+             menu.classList.toggle('hidden');
+             menu.classList.toggle('open');
+             
+             // Toggle between hamburger and close icon
+             const icon = this.querySelector('i');
+             if (menu.classList.contains('hidden')) {
+                 icon.classList.remove('fa-times');
+                 icon.classList.add('fa-bars');
+             } else {
+                 icon.classList.remove('fa-bars');
+                 icon.classList.add('fa-times');
+             }
+         });
+     </script>
 </body>
 </html>
