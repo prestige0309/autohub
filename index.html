@@ -10,13 +10,21 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/1a5370af29.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="autohub page2.html">
     <link rel="stylesheet" href="autohup page3.html">
     <link rel="stylesheet" href="autohub.html">
     <link rel="stylesheet" href="blog.html">
     <script src="../node_modules/flyonui/dist/accordion.js"></script> 
     <link rel="icon" type="png" href="/car/favicon.png">
+    <!-- Font Awesome 6 CDN -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+integrity="sha512-CRlgKCe9e/3UlKq3VOkz4SBdXozuDk4ExKb+NhdQGUUmNE6owDElWBFqRzqU4ukXvNOZ7r5G4XrVfIh1vJ2Z2g=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+
     <title>AutoHub</title>
 </head>
 <body class="m-0">
@@ -40,7 +48,7 @@
         </div>
         <div class="flex gap-5">
         <div>
-            <a href="contact us page.html" class="bg-red-600 text-white p-5 pt-7 pb-7 hover:bg-black hover:text-white hover:duration-500">Contact Technicians</a>
+            <a href="contact us page.html" class="bg-red-600 text-white p-5 pt-7 pb-7 hover:bg-black hover:text-white hover:duration-500 active:bg-black active:text-white transition">Contact Technicians</a>
         </div>
         <div>
             <i class="fa fa-shopping-cart"></i>
@@ -89,12 +97,12 @@
       Standard of Quality and durability
     </p>
     <div class="flex flex-col sm:flex-row gap-4 mb-8">
-      <a href="#" class="bg-red-600 text-white font-medium rounded-full px-6 py-3 hover:bg-black transition  active:bg-black">Explore Products</a>
-      <a href="autohup page3.html" class="border border-gray-500 text-gray-800 font-medium rounded-full px-6 py-3 hover:bg-black hover:text-white transition  active:bg-black">About Us</a>
-    </div>
-    <div class="flex items-center gap-3">
-      <i class="fas fa-phone text-red-600"></i>
-      <p>CALL CENTER: <span class="text-red-600">543-705-8174</span></p>
+      <a href="#" class="bg-red-600 text-white font-medium rounded-full px-6 py-3 hover:bg-black focus:bg-black active:bg-black transition">
+        Explore Products
+      </a>
+      <a href="#" class="border border-gray-500 text-gray-800 font-medium rounded-full px-6 py-3 hover:bg-black hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white transition">
+        About Us
+      </a>
     </div>
   </div>
 
@@ -131,10 +139,10 @@
             <p class="text-center">Car Wheel with Rotor</p>
             <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
               <div>$18.00</div>
-              <div class="flex text-red-600 gap-2 text-center items-center">
+              <button class="flex gap-2 items-center border border-gray-300 border-t-0 border-r-0 border-b-0 px-4 py-1 text-red-600 hover:bg-red-600 hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white transition">
                 <i class="fa fa-shopping-cart"></i>
-                <a href="">Add to Cart</a>
-              </div>
+                Add to Cart
+              </button>
             </div>
           </div>
           <div class="h- w-60 bg-white">
@@ -142,10 +150,10 @@
             <p class="text-center">Tire Pressure Gauge</p>
             <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
               <div>$35.00</div>
-              <div class="flex text-red-600 gap-2 text-center items-center">
+              <button class="flex gap-2 items-center border border-gray-300 border-t-0 border-r-0 border-b-0 px-4 py-1 text-red-600 hover:bg-red-600 hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white transition">
                 <i class="fa fa-shopping-cart"></i>
-                <a href="">Add to Cart</a>
-              </div>
+                Add to Cart
+              </button>
             </div>
           </div>
           <div class="h- w-60 bg-white">
@@ -153,10 +161,10 @@
             <p class="text-center">Disc Brake</p>
             <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
               <div>$12.00</div>
-              <div class="flex text-red-600 gap-2 text-center items-center">
+              <button class="flex gap-2 items-center border border-gray-300 border-t-0 border-r-0 border-b-0 px-4 py-1 text-red-600 hover:bg-red-600 hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white transition">
                 <i class="fa fa-shopping-cart"></i>
-                <a href="">Add to Cart</a>
-              </div>
+                Add to Cart
+              </button>
             </div>
           </div>
           <div class="h- w-60 bg-white">
@@ -164,10 +172,10 @@
             <p class="text-center">BMW Boosted Engine</p>
             <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
               <div>$117.00</div>
-              <div class="flex text-red-600 gap-2 text-center items-center">
+              <button class="flex gap-2 items-center border border-gray-300 border-t-0 border-r-0 border-b-0 px-4 py-1 text-red-600 hover:bg-red-600 hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white transition">
                 <i class="fa fa-shopping-cart"></i>
-                <a href="">Add to Cart</a>
-              </div>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -363,8 +371,9 @@
       <h1 class="text-6xl font-black text-center text-white mt-10"> Get <span class="text-red-600 ">20%</span> Discount <br>on your first purchase</h1>
       <div class="text-center mt-60">
         <i class="fa fa-shopping-cart bg-red-600 text-white p-4 rounded-full"></i>
-        <a href="" class="bg-white text-black font-medium rounded-3xl pt-3 pb-3 pr-7 pl-7 hover:bg-red-600 hover:text-white hover:duration-500 relative">Explore Auto Products</a>
-      </div>
+        <a href="#" class="bg-white text-black font-medium rounded-3xl px-7 py-3 hover:bg-red-600 hover:text-white focus:bg-red-600 focus:text-white active:bg-red-600 active:text-white transition">
+          Explore Auto Products
+        </a>      </div>
     </div>
    <div class="bg-white mt-30">
     <div class="flex gap-3 items-center justify-center">
@@ -375,8 +384,10 @@
     <div class="flex flex-wrap gap-5 mt-10 justify-center">
       <div class="h- w- border-solid border-1 border-gray-300 group">
         <div class="h- w- bg-black bg-cover bg-center m-3 p-3 " style="background-image: url(car/p5-1.jpg);">
-        <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center  opacity-0 group-hover:opacity-100 transition-opacity duration-300"><i class="fa fa-link"></i></div>
-      </div>
+          <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
+            <i class="fa fa-link"></i>
+          </div>
+</div>
         <div class="flex gap-2 text-sm mt-2 mb-3 ml-3 mr-3">
         <p class="text-red-600">TUTORIAL UPDATES</p>
           <div class="flex gap-1 items-center">
@@ -390,7 +401,9 @@
       
       <div class=" border-solid border-1 border-gray-300 group">
         <div class="h- w- bg-black bg-cover bg-center m-3 p-3 " style="background-image: url(car/p4-1-1.jpg);">
-          <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center  opacity-0 group-hover:opacity-100 transition-opacity duration-300"><i class="fa fa-link"></i></div>
+          <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
+            <i class="fa fa-link"></i>
+          </div>
         </div>
           <div class="flex gap-2 text-sm mt-2 mb-3 ml-3 mr-3">
           <p class="text-red-600">INTERVIEW NEWS</p>
@@ -405,7 +418,9 @@
 
       <div class="border-solid border-1 border-gray-300 group">
         <div class="h- w- bg-black bg-cover bg-center m-3 p-3 " style="background-image: url(car/p1-1.jpg);">
-          <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center  opacity-0 group-hover:opacity-100 transition-opacity duration-300"><i class="fa fa-link"></i></div>
+          <div class="h-70 w-70 bg-red-600/70 text-white text-4xl text-center content-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
+            <i class="fa fa-link"></i>
+          </div>
         </div>
           <div class="flex gap-2 text-sm mt-2 mb-3 ml-3 mr-3">
           <p class="text-red-600">UNCATEGORIZED</p>
@@ -418,7 +433,10 @@
         <div  class="text-center text-sm justify-center border-solid border-1 border-gray-300 p-2 border-r-0 border-l-0 border-b-0 group-hover:text-white group-hover:bg-red-600"><a href="">READ MORE</a></div>
       </div>
      </div>
-     <div class="text-center mt-15"><a href="blog.html" class="bg-black text-white font-medium rounded-3xl pt-3 pb-3 pr-7 pl-7 hover:bg-red-600 transition text-center">Explore More Posts</a></div>
+     <div class="text-center mt-15"><a href="blog.html" class="bg-black text-white font-medium rounded-3xl px-7 py-3 hover:bg-red-600 focus:bg-red-600 active:bg-red-600 transition">
+      Explore More Posts
+    </a>
+    </div>
     </div>
     <!-- footer  -->
     <footer class=" bg-black mt-30 pt-20 pr-30 pb-20 pl-30 ">
@@ -431,7 +449,10 @@
       <h1 class="text-3xl font-black text-gray-300"> <span class="text-red-600 ">SUBSCRIBE</span> AUTOHUB</h1>
       <form action="" class="mt-20 flex-none md:flex ">
       <input type="email" placeholder="Email Address" class="bg-black border-solid border-1 border-gray-300 hover:border-red-600 w-[100%]">
-      <button class="bg-white pt-3 pb-3 pr-7 pl-7 hover:bg-red-600 hover:text-gray-300 text-xs">SUBSCRIBE</button>
+      <button class="bg-white text-xs px-7 py-3 hover:bg-red-600 hover:text-gray-300 focus:bg-red-600 focus:text-gray-300 active:bg-red-600 active:text-gray-300 transition">
+        SUBSCRIBE
+      </button>
+      
     </form>
   </div>
   <div>
