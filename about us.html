@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
     <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/1a5370af29.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
       /* Custom hover effects for mobile */
       @media (hover: none) {
@@ -34,70 +29,77 @@
 </head>
 <body class="m-0">
    <!-- Navigation -->
-   <nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="text-3xl font-bold">
-            <a href="index.html" class="text-black hover:text-red-600 transition">AUTOHUB</a>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        
-             <!-- Mobile Menu (initially hidden) -->
-             <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-black bg-opacity-90 z-40 pt-20 px-5 hidden">
-              <div class="flex flex-col space-y-5 text-white text-lg">
-                  <a href="index.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">HOME</a>
-                  <a href="autohub page2.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PRODUCTS</a>
-                  <a href="blog.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">BLOG</a>
-                  <a href="#" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PAGES</a>
-                  <a href="contact us page.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">CONTACT</a>
-                  <div class="flex items-center justify-between py-3">
-                      <a href="contact us page.html" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-black transition-all">
-                          Contact Technicians
-                      </a>
-                      <a href="#" class="flex items-center gap-2 hover:text-red-500 transition-all">
-                          <i class="fa fa-shopping-cart"></i>
-                          Cart
-                      </a>
-                  </div>
-              </div>
-          </div>
-        <!-- Desktop Menu -->
-        <div id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8">
-            <div class="mt-4 md:mt-0">
-                <form class="flex items-center">
-                    <i class="fas fa-search text-gray-500 mr-2"></i>
-                    <input type="search" placeholder="Search Products" 
-                           class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
-                </form>
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-3xl font-bold">
+                <a href="index.html" class="text-black hover:text-red-600 transition">AUTOHUB</a>
             </div>
             
-            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
-              <a href="index.html" class="text-black font-medium hover:text-red-600 transition">HOME</a>
-              <a href="autohub page2.html" class="text-black font-medium hover:text-red-600 transition">PRODUCTS</a>
-              <a href="blog.html" class="text-black font-medium hover:text-red-600 transition">BLOG</a>
-              <a href="autohup page3.html" class="text-black font-medium hover:text-red-600 transition">ABOUT</a>
-              <a href="contact us page.html" class="text-black font-medium hover:text-red-600 transition">CONTACT</a>
-          </div>
+              <!-- Mobile Navigation -->
+            <div class="md:hidden fixed top-0 left-0 right-0 bg-white z-50 shadow-md p-4 flex justify-between items-center">
+                <div class="text-2xl font-bold">AUTOHUB</div>
+                <button id="mobile-menu-toggle" class="text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        
+            <!-- Mobile Menu (initially hidden) -->
+            <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-black bg-opacity-90 z-40 pt-20 px-5 hidden">
+                <div class="flex flex-col space-y-5 text-white text-lg">
+                    <a href="index.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">HOME</a>
+                    <a href="Products.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PRODUCTS</a>
+                    <a href="blog.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">BLOG</a>
+                    <a href="#" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PAGES</a>
+                    <a href="contact us page.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">CONTACT</a>
+                    <div class="flex items-center justify-between py-3">
+                        <a href="contact us page.html" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-black transition-all">
+                            Contact Technicians
+                        </a>
+                        <a href="auto cart.html" class="flex items-center gap-2 hover:text-red-500 transition-all">
+                            <i class="fa fa-shopping-cart"></i>
+                            Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center justify-between p-5 sticky top-0 z-30 bg-white shadow-sm">
+                <!-- ... rest of your desktop nav ... -->
+            </nav>
             
-            <div class="flex items-center space-x-4 mt-4 md:mt-0">
-                <a href="contact.html" 
-                   class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-black transition">
-                    Contact Technicians
-                </a>
-                <a href="#" class="flex items-center text-black hover:text-red-600 transition">
-                    <i class="fas fa-shopping-cart mr-1"></i>
-                    Cart
-                </a>
+            <!-- Desktop Menu -->
+            <div id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8">
+                <div class="mt-4 md:mt-0">
+                    <form class="flex items-center">
+                        <i class="fas fa-search text-gray-500 mr-2"></i>
+                        <input type="search" placeholder="Search Products" 
+                               class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    </form>
+                </div>
+                
+                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+                    <a href="index.html" class="text-black font-medium hover:text-red-600 transition">HOME</a>
+                    <a href="Products.html" class="text-black font-medium hover:text-red-600 transition">PRODUCTS</a>
+                    <a href="blog.html" class="text-black font-medium hover:text-red-600 transition">BLOG</a>
+                    <a href="About Us.html" class="text-black font-medium hover:text-red-600 transition">ABOUT</a>
+                    <a href="contact us page.html" class="text-black font-medium hover:text-red-600 transition">CONTACT</a>
+                </div>
+                
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <a href="contact us page.html" 
+                       class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-black transition">
+                        Contact Technicians
+                    </a>
+                    <a href="auto cart.html" class="flex items-center text-black hover:text-red-600 transition">
+                        <i class="fas fa-shopping-cart mr-1"></i>
+                        Cart
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- hero  -->
     <div class="h-70 bg-black bg-cover bg-center " style="background-image: url(car/br-new.jpg);"><div class="h-[100%] bg-black opacity-70 text-center items-center text-white content-center">
@@ -188,19 +190,19 @@
 </div>
 <!-- popular products  -->
 <div class="mt-70 md:mt-30">
-  <div class=" bg-black text-white pt-20 pr-30 pl-30 pb-20 justify-center bg-black bg-cover bg-center " style="background-image: url(car/benz-amg-full.jpg);">
-    <div>
-        <div class="flex gap-2 items-center">
+  <div class=" bg-black text-white pt-20  pb-20 justify-center bg-black bg-cover bg-center " style="background-image: url(car/benz-amg-full.jpg);">
+    <div class="text-center lg:left ">
+        <div class="flex gap-2 items-center justify-center lg:justify-start pr-10 pl-10">
         <i class="fas fa-circle text-sm text-red-600"></i>
         <p>FEATURED PRODUCTS</p>
     </div>
-    <div class="flex justify-between">
+    <div class="flex flex-wrap justify-center lg:justify-between pr-10 pl-10">
         <div class="font-bold text-3xl"> <span class="text-red-600">POPULAR</span> PRODUCTS</div>
-        <div class="text-xl font-medium border-solid border-1 border-white rounded-3xl pt-2 pr-6 pl-6 pb-2 items-center hover:bg-white hover:text-red-600 hover:duration-500">EXPLORE</div>
+        <div class="text-xl font-medium border-solid border-1 border-white rounded-3xl pt-2 pr-6 pl-6 pb-2  hover:bg-white hover:text-red-600 hover:duration-500">EXPLORE</div>
     </div>
     <!-- four slider  -->
-    <div class="flex flex-wrap justify-center gap-5 mt-10 content-center text-black">
-      <div class=" w-60 bg-white ">
+    <div class="grid grid-cols-2 md:grid-cols-4 justify-center gap-4 mt-10 content-center text-black pr-2 pl-2 md:pr-10 md:pl-10">
+      <div class="  bg-white ">
         <div><img src="car/package6-1.jpg" alt=""></div>
         <p class="text-center">Car Wheel with Rotor</p>
         <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
@@ -211,7 +213,7 @@
           </div>
         </div>
       </div>
-      <div class="h- w-60 bg-white">
+      <div class="bg-white">
         <div><img src="car/package2-1.jpg" alt=""></div>
         <p class="text-center">Tire Pressure Gauge</p>
         <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
@@ -222,7 +224,7 @@
           </div>
         </div>
       </div>
-      <div class="h- w-60 bg-white">
+      <div class="  bg-white">
         <div><img src="car/package1-1.jpg" alt=""></div>
         <p class="text-center">Disc Brake</p>
         <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
@@ -233,7 +235,7 @@
           </div>
         </div>
       </div>
-      <div class="h- w-60 bg-white">
+      <div class="  bg-white">
         <div><img src="car/p9.jpg" alt=""></div>
         <p class="text-center">BMW Boosted Engine</p>
         <div class="flex text-center mt-5 border-solid border-1 border-black border-r-0 border-l-0 border-b-0 justify-between items-center pt-1 pr-3 pl-2 pb-1">
@@ -248,14 +250,14 @@
 </div>
 </div>
 <!-- what our customer  -->
-<div class=" mt-15 pt-10 pb-10 pr-40 pl-40">
-  <div class="flex gap-2 items-center">
+<div class=" mt-15 pt-10 pb-10 pr-10 pl-10">
+  <div class="flex gap-2 items-center sm:justify-center md: justify-center lg:justify-start">
     <i class="fas fa-circle text-sm text-red-600"></i>
-    <p>AUTO PARTS CUSTOMER REVIEW</p>
+    <p class="text-center ">AUTO PARTS CUSTOMER REVIEW</p>
 </div>
-<h1 class="text-3xl font-medium ml-"> <span class="text-red-600 ">WHAT SAYS OUR</span> CUSTOMERS</h1>
+<h1 class="text-3xl font-medium text-center lg:text-left"> <span class="text-red-600 ">WHAT SAYS OUR</span> CUSTOMERS</h1>
 <div class="flex flex-wrap gap-5 justify-center mt-20">
-  <div class="h- w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative">
+  <div class="h-100 w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative mb-8 md:mb-0">
     <i class="fas fa-comment-alt text-7xl text-red-200 absolute bottom-90  left-10"></i>
     <p>A mechanic can be a car owner’s best friend or worst nightmare. When car problems arise, people depend heavily on their mechanic to diagnose and repair the issue in as little time as possible. They expect mechanics to work quickly and ethically.</p>
     <div class="flex mt-10 items-center gap-3">
@@ -266,7 +268,7 @@
       </div>
     </div>
   </div>
-  <div class="h- w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative">
+  <div class="h-100 w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative mb-8 md:mb-0">
     <i class="fas fa-comment-alt text-7xl text-red-200 absolute bottom-90  left-10"></i>
     <p>I can not say enough about how impressed I was with the terrific service I received at Auto Repair Specialists! The price at the door said $26 Star Smog, plus the cost of the certificate, and that’s what I was charged. No $10 extra for the size or age of my vehicle.</p>
     <div class="flex mt-10 items-center gap-3">
@@ -277,7 +279,7 @@
       </div>
     </div>
   </div>
-  <div class="h- w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative">
+  <div class="h-100 w-80 bg-white pt-15 pb-10 pr-10 pl-10 shadow-xl border-solid border-1 border-gray-300 relative mb-8 md:mb-0">
     <i class="fas fa-comment-alt text-7xl text-red-200 absolute bottom-90  left-10"></i>
     <p>II’ve been using parts from this supplier for years, and they’ve exceeded my expectations. The quality is top-notch, ensuring durability and performance every time. Their customer service is incredibly helpful, guiding me to the right products.</p>
     <div class="flex mt-10 items-center gap-3">
@@ -343,38 +345,36 @@
 </footer>
 
  <!-- Scripts -->
- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
- <script>
-     // Mobile menu toggle
-     document.getElementById('menu-toggle').addEventListener('click', function() {
-         const menu = document.getElementById('mobile-menu');
-         menu.classList.toggle('hidden');
-     });
+<!-- Glide.js Script -->
 
-     // Initialize carousel
-     new Glide('.glide', {
-         type: 'carousel',
-         perView: 1,
-         autoplay: 3000,
-         hoverpause: true
-     }).mount();
- </script>
-     <script>
-         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-             const menu = document.getElementById('mobile-menu');
-             menu.classList.toggle('hidden');
-             menu.classList.toggle('open');
-             
-             // Toggle between hamburger and close icon
-             const icon = this.querySelector('i');
-             if (menu.classList.contains('hidden')) {
-                 icon.classList.remove('fa-times');
-                 icon.classList.add('fa-bars');
-             } else {
-                 icon.classList.remove('fa-bars');
-                 icon.classList.add('fa-times');
-             }
-         });
-     </script>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('open');
+
+    const icon = this.querySelector('i');
+    if (menu.classList.contains('hidden')) {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    } else {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    }
+  });
+
+  // Initialize Glide.js after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 1,
+      autoplay: 3000,
+      hoverpause: true
+    }).mount();
+  });
+</script>
+
 </body>
 </html>
