@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/1a5370af29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      /* Custom hover effects for mobile */
+      @media (hover: none) {
+          .mobile-hover:hover {
+              transform: none !important;
+          }
+          .card-hover:hover {
+              box-shadow: none !important;
+              transform: none !important;
+          }
+          .card-hover:active {
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+              transform: translateY(-2px) !important;
+          }
+      }
+  </style>
+
+    <link rel="stylesheet" href="autohub.html">
+    <title>Shopping Cart</title>
+</head>
+<body class="m-0">
+   <!-- Navigation -->
+   <nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-3xl font-bold">
+            <a href="index.html" class="text-black hover:text-red-600 transition">AUTOHUB</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+             <!-- Mobile Menu (initially hidden) -->
+             <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-black bg-opacity-90 z-40 pt-20 px-5 hidden">
+              <div class="flex flex-col space-y-5 text-white text-lg">
+                  <a href="Landing Page.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">HOME</a>
+                  <a href="Products.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PRODUCTS</a>
+                  <a href="blog.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">BLOG</a>
+                  <a href="#" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PAGES</a>
+                  <a href="contact us page.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">CONTACT</a>
+                  <div class="flex items-center justify-between py-3">
+                      <a href="contact us page.html" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-black transition-all">
+                          Contact Technicians
+                      </a>
+                      <a href="auto cart.html" class="flex items-center gap-2 hover:text-red-500 transition-all">
+                          <i class="fa fa-shopping-cart"></i>
+                          Cart
+                      </a>
+                  </div>
+              </div>
+          </div>
+        <!-- Desktop Menu -->
+        <div id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8">
+            <div class="mt-4 md:mt-0">
+                <form class="flex items-center">
+                    <i class="fas fa-search text-gray-500 mr-2"></i>
+                    <input type="search" placeholder="Search Products" 
+                           class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                </form>
+            </div>
+            
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+              <a href="Landing Page.html" class="text-black font-medium hover:text-red-600 transition">HOME</a>
+              <a href="Products.html" class="text-black font-medium hover:text-red-600 transition">PRODUCTS</a>
+              <a href="blog.html" class="text-black font-medium hover:text-red-600 transition">BLOG</a>
+              <a href="About Us.html" class="text-black font-medium hover:text-red-600 transition">ABOUT</a>
+              <a href="contact us page.html" class="text-black font-medium hover:text-red-600 transition">CONTACT</a>
+          </div>
+            
+            <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <a href="contact us page.html" 
+                   class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-black transition">
+                    Contact Technicians
+                </a>
+                <a href="auto cart.html" class="flex items-center text-black hover:text-red-600 transition">
+                    <i class="fas fa-shopping-cart mr-1"></i>
+                    Cart
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- hero  -->
+    <div class="h-70 bg-black bg-cover bg-center " style="background-image: url(car/br-new.jpg);"><div class="h-[100%] bg-black opacity-70 text-center items-center text-white content-center">
+        <p class="text-2xl">ABOUT US</p>
+    <P>Home >> About Us</P>
+</div>
+</div>
+<div>
+    <ul class="flex justify-center gap-20 text-xl mt-20">
+        <li><a href="">1. Shopping Cart <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="" class="text-gray-400 hover:text-red-200 transition">2. Checkout Details <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="" class="text-gray-400">3. Order Complete <i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+</div>
+<div id="cart-items" class="mt-20 mb-20">
+   
+</div>
+<div class="flex justify-center">
+<button id="Checkout-btn" class="bg-red-600 text-white pr-6 pl-6 pt-3 pb-3 text-xl rounded-md text-center hover:bg-black transition duration-300">Checkout</button>
+</div>
+<!-- footer  -->
+<footer class=" bg-black mt-30 pt-20 pr-30 pb-20 pl-30 ">
+  <div class="flex flex-wrap gap-25">
+  <div>
+  <div class="flex gap-3 items-center">
+    <i class="fas fa-circle text-sm text-red-600"></i>
+    <p class="text-gray-300">NEWS LETTER</p>
+  </div>
+  <h1 class="text-3xl font-black text-gray-300"> <span class="text-red-600 ">SUBSCRIBE</span> AUTOHUB</h1>
+  <form action="" class="mt-20 flex-none md:flex ">
+  <input type="email" placeholder="Email Address" class="bg-black border-solid border-1 border-gray-300 hover:border-red-600 w-[100%]">
+  <button class="bg-white pt-3 pb-3 pr-7 pl-7 hover:bg-red-600 hover:text-gray-300 text-xs">SUBSCRIBE</button>
+</form>
+</div>
+<div>
+<p class="text-gray-300">QUICK LINKS</p>
+<br>
+<ul class="list-none text- text-white leading-loose">
+  <li><a href="">About Us</a></li>
+  <li><a href="">Products</a></li>
+  <li><a href="">Support Centre</a></li>
+  <li><a href="">Refund Policy</a></li>
+  <li><a href="">Location</a></li>
+  <li><a href="">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<p class="text-gray-300 ">CONTACT US</p>
+<br>
+<p class="text-white">53 Rue Jean-Jacques Rousseau, <br>75001 Paris, France</p>
+<br>
+<p class="text-white">info@autohub.com</p>
+<br>
+<p class="text-white">+1 708-765-5249</p>
+</div>
+</div>
+<hr class="text-gray-300 mt-20 mb-5">
+<ul class="flex justify-between">
+<li class="text-xs text-gray-300"><a href="">© Copyright 2025. All Rights Reserved, Proudly powered by WordPress</a></li>
+<li class="text-xs text-gray-300"><a href="">Privacy Policy / Contact Us</a></li>
+</ul>
+</footer>
+
+ <!-- Scripts -->
+ <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+ <script>
+     // Mobile menu toggle
+     document.getElementById('menu-toggle').addEventListener('click', function() {
+         const menu = document.getElementById('mobile-menu');
+         menu.classList.toggle('hidden');
+     });
+
+     // Initialize carousel
+     new Glide('.glide', {
+         type: 'carousel',
+         perView: 1,
+         autoplay: 3000,
+         hoverpause: true
+     }).mount();
+ </script>
+     <script>
+         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+             const menu = document.getElementById('mobile-menu');
+             menu.classList.toggle('hidden');
+             menu.classList.toggle('open');
+             
+             // Toggle between hamburger and close icon
+             const icon = this.querySelector('i');
+             if (menu.classList.contains('hidden')) {
+                 icon.classList.remove('fa-times');
+                 icon.classList.add('fa-bars');
+             } else {
+                 icon.classList.remove('fa-bars');
+                 icon.classList.add('fa-times');
+             }
+         });
+     </script>
+</body>
+</html>
