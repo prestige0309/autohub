@@ -37,16 +37,18 @@
                     <a href="index.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">HOME</a>
                     <a href="Products.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PRODUCTS</a>
                     <a href="blog.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">BLOG</a>
-                    <a href="about us.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">ABOUT US</a>
+                    <a href="#" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">PAGES</a>
                     <a href="contact us page.html" class="py-3 border-b border-gray-700 hover:text-red-500 transition-all">CONTACT</a>
                     <div class="flex items-center justify-between py-3">
                         <a href="contact us page.html" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-black transition-all">
                             Contact Technicians
                         </a>
-                        <a href="auto cart.html" class="flex items-center gap-2 hover:text-red-500 transition-all">
-                            <i class="fa fa-shopping-cart"></i>
-                            Cart
-                        </a>
+                        <a href="auto cart.html" class="flex items-center gap-2 hover:text-red-500 transition-all relative">
+                          <i class="fa fa-shopping-cart"></i>
+                          <span class="cart-count hidden absolute -top-1 -right-3 bg-red-600 text-white text-xs rounded-full h-5 w-5 items-center justify-center text-center">
+                              0
+                          </span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -68,9 +70,9 @@
                 
                 <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
                     <a href="index.html" class="text-black font-medium hover:text-red-600 transition">HOME</a>
-                    <a href="products.html" class="text-black font-medium hover:text-red-600 transition">PRODUCTS</a>
+                    <a href="Products.html" class="text-black font-medium hover:text-red-600 transition">PRODUCTS</a>
                     <a href="blog.html" class="text-black font-medium hover:text-red-600 transition">BLOG</a>
-                    <a href="about Us.html" class="text-black font-medium hover:text-red-600 transition">ABOUT</a>
+                    <a href="About Us.html" class="text-black font-medium hover:text-red-600 transition">ABOUT</a>
                     <a href="contact us page.html" class="text-black font-medium hover:text-red-600 transition">CONTACT</a>
                 </div>
                 
@@ -79,15 +81,16 @@
                        class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-black transition">
                         Contact Technicians
                     </a>
-                    <a href="auto cart.html" class="flex items-center text-black hover:text-red-600 transition">
-                        <i class="fas fa-shopping-cart mr-1"></i>
-                        Cart
-                    </a>
+                    <a href="auto cart.html" class="flex items-center text-black hover:text-red-600 transition relative">
+                      <i class="fas fa-shopping-cart mr-1"></i>
+                      <span class="cart-count hidden absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 items-center justify-center text-center">
+                          0
+                      </span>
+                  </a>
                 </div>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-r from-white to-red-50">
         <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
@@ -143,67 +146,84 @@
                 </a>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Product 1 -->
-                <div class="bg-white text-black rounded-lg overflow-hidden shadow-lg transition hover:shadow-xl card-hover">
-                    <img src="car/package6-1.jpg" alt="Car Wheel with Rotor" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">Car Wheel with Rotor</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$18.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
+            <div class="grid grid-cols-2 md:grid-cols-4 justify-center gap-4 mt-10 content-center text-black pr-2 pl-2 md:pr-10 md:pl-10">
+                <div class="product-item">
+                    <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                      <div><img src="car/package2-1.jpg" alt="Tire Pressure Gauge" class="product-image"></div>
+                      <p class="text-center product-name">Tire Pressure Gauge</p>
+                      <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                        <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="35.00">$35.00</div>
+                        <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                          <i class="fa fa-shopping-cart"></i>
+                          <button class="add-to-cart-btn"
+                          data-product-id="7"
+                          data-product-name="Tire Pressure Gauge"
+                          data-product-price="35.00"
+                          data-product-image="car/package2-1.jpg"
+                          >Add to Cart</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="bg-white text-black rounded-lg overflow-hidden shadow-lg transition hover:shadow-xl card-hover">
-                    <img src="car/package2-1.jpg" alt="Tire Pressure Gauge" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">Tire Pressure Gauge</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$35.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
+                  </div>
+                <!-- product 2 -->
+                <div class="product-item">
+                    <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                      <div><img src="car/package6-1.jpg" alt="BMW Tyre" class="product-image"></div>
+                      <p class="text-center product-name">BMW Tyre</p>
+                      <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                        <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="44.00">$44.00</div>
+                        <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                          <i class="fa fa-shopping-cart"></i>
+                          <button class="add-to-cart-btn"
+                          data-product-id="5"
+                          data-product-name="BMW Tyre"
+                          data-product-price="44.00"
+                          data-product-image="car/package6-1.jpg"
+                          >Add to Cart</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="bg-white text-black rounded-lg overflow-hidden shadow-lg transition hover:shadow-xl card-hover">
-                    <img src="car/package1-1.jpg" alt="Disc Brake" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">Disc Brake</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$12.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
+                  </div>
+                <!-- product 3 -->
+                <div class="product-item">
+                    <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                      <div><img src="car/package1-1.jpg" alt="DISC Break" class="product-image"></div>
+                      <p class="text-center product-name">DISC Break</p>
+                      <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                        <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="12.00">$12.00</div>
+                        <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                          <i class="fa fa-shopping-cart"></i>
+                          <button class="add-to-cart-btn"
+                          data-product-id="6"
+                          data-product-name="DISC Break"
+                          data-product-price="12.00"
+                          data-product-image="car/package1-1.jpg"
+                          >Add to Cart</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="bg-white text-black rounded-lg overflow-hidden shadow-lg transition hover:shadow-xl card-hover">
-                    <img src="car/p9.jpg" alt="BMW Boosted Engine" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">BMW Boosted Engine</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$117.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
+                  </div>
+             
+                <!-- prouct 8  -->
+                <div class="product-item">
+                    <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                      <div><img src="car/p9.jpg" alt="BMW Boosted Engine" class="product-image"></div>
+                      <p class="text-center product-name">BMW Boosted Engine</p>
+                      <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                        <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="50.00">$50.00</div>
+                        <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                          <i class="fa fa-shopping-cart"></i>
+                          <button class="add-to-cart-btn"
+                          data-product-id="4"
+                          data-product-name="BMW Boosted Engine"
+                          data-product-price="50.00"
+                          data-product-image="car/p9.jpg"
+                          >Add to Cart</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+              </div>
         </div>
     </section>
 
@@ -334,66 +354,86 @@
                 </h2>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition hover:shadow-lg card-hover">
-                    <img src="car/p10.jpg" alt="BMW Air Filter" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">BMW Air Filter</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$18.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
-                        </div>
+           
+            <div>
+              <div class="grid grid-cols-2 md:grid-cols-4 justify-center gap-4 mt-10 content-center text-black pr-2 pl-2 md:pr-10 md:pl-10">
+                <div class="product-item">
+                  <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                    <div><img src="car/p10.jpg" alt="BMW Air Filter" class="product-image"></div>
+                    <p class="text-center product-name">BMW Air Filter</p>
+                    <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                      <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="18.00">$18.00</div>
+                      <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                        <i class="fa fa-shopping-cart"></i>
+                        <button class="add-to-cart-btn"
+                        data-product-id="1"
+                        data-product-name="BMW Air Filter"
+                        data-product-price="18.00"
+                        data-product-image="car/p10.jpg"
+                        >Add to Cart</button>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-                <!-- Product 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition hover:shadow-lg card-hover">
-                    <img src="car/p12.jpg" alt="Xtra Break Pads" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">Xtra Break Pads</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$18.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
-                        </div>
+                <!-- product 2 -->
+                <div class="product-item">
+                  <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                    <div><img src="car/p11.jpg" alt="BMW X4 Alternator" class="product-image"></div>
+                    <p class="text-center product-name">BMW X4 Alternator</p>
+                    <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                      <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="28.00">$28.00</div>
+                      <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                        <i class="fa fa-shopping-cart"></i>
+                        <button class="add-to-cart-btn"
+                        data-product-id="2"
+                        data-product-name="BMW X4 Alternator"
+                        data-product-price="28.00"
+                        data-product-image="car/p11.jpg"
+                        >Add to Cart</button>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-                <!-- Product 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition hover:shadow-lg card-hover">
-                    <img src="car/p11.jpg" alt="BMW X4 Alternator" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">BMW X4 Alternator</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$18.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
-                        </div>
+                <!-- product 3 -->
+                <div class="product-item">
+                  <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                    <div><img src="car/p12.jpg" alt="XTRA Break Pads" class="product-image"></div>
+                    <p class="text-center product-name">XTRA Break Pads</p>
+                    <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                      <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="30.00">$30.00</div>
+                      <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                        <i class="fa fa-shopping-cart"></i>
+                        <button class="add-to-cart-btn"
+                        data-product-id="3"
+                        data-product-name="XTRA Break Pads"
+                        data-product-price="30.00"
+                        data-product-image="car/p12.jpg"
+                        >Add to Cart</button>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-                <!-- Product 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition hover:shadow-lg card-hover">
-                    <img src="car/p9.jpg" alt="BMW Boosted Engine" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-center font-medium mb-4">BMW Boosted Engine</h3>
-                        <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                            <span class="font-bold">$18.00</span>
-                            <button class="flex items-center text-red-600 hover:text-white hover:bg-red-600 px-3 py-1 rounded transition">
-                                <i class="fas fa-shopping-cart mr-2"></i>
-                                Add
-                            </button>
-                        </div>
+             
+                <!-- prouct 8  -->
+                <div class="product-item">
+                  <div class=" bg-white border-solid border-1 border-gray-300 shadow-md">
+                    <div><img src="car/package3-1.jpg" alt="Car Seat" class="product-image"></div>
+                    <p class="text-center product-name">Car Seat</p>
+                    <div class="flex text-center mt-5 space-evenly items-center border-solid border-1 border-gray-300 border-r- border-l- border-b- justify-center">
+                      <div class=" pt-1 pr-3 pb-1 pl-3 product-price" data-price="43.00">$43.00</div>
+                      <div class="flex text-red-600 gap-2 text-center items-center border-solid border-1 border-gray-300 border-r-0 border-b-0 border-t-0 pt-1 pr-5 pb-1 pl-4">
+                        <i class="fa fa-shopping-cart"></i>
+                        <button class="add-to-cart-btn"
+                        data-product-id="8"
+                        data-product-name="Car Seat"
+                        data-product-price="43.00"
+                        data-product-image="car/package3-1.jpg"
+                        >Add to Cart</button>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
             
             <div class="text-center mt-12">
@@ -573,33 +613,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
-          const menu = document.getElementById('mobile-menu');
-          menu.classList.toggle('hidden');
-          menu.classList.toggle('open');
-      
-          const icon = this.querySelector('i');
-          if (menu.classList.contains('hidden')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-          } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-          }
-        });
-      
-        // Initialize Glide.js after DOM is loaded
-        document.addEventListener('DOMContentLoaded', function () {
-          new Glide('.glide', {
-            type: 'carousel',
-            perView: 1,
-            autoplay: 3000,
-            hoverpause: true
-          }).mount();
-        });
-      </script>
+    <script src="script.js"></script>
       
 </body>
 </html>
