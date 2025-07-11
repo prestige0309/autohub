@@ -239,3 +239,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Add this code inside your DOMContentLoaded event listener, near the top
+
+// Initialize Glide carousel
+function initGlideCarousel() {
+    const glideElement = document.querySelector('.glide');
+    if (glideElement) {
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 1,
+            focusAt: 'center',
+            gap: 0,
+            autoplay: 3000,
+            hoverpause: true,
+            animationDuration: 800
+        }).mount();
+    }
+}
+
+// Call the function after DOM is loaded
+initGlideCarousel();
